@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "mecha-zone-app",
+  "name": "MechaZone spare parts app",
   "icons": [
     {
       "src": "favicon.ico",
