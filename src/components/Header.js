@@ -42,7 +42,7 @@ const Header = () => {
 					</div>
 					<div className="nav-item dropdown">
 						<button className="btn nav-link dropdown-toggle shadow-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-						<img src="https://github.com/mdo.png" alt="mdo" width="32" height="32" className="rounded-circle" />
+						<img src={require("../images/invalid_user.png")} alt="mdo" width="32" height="32" className="rounded-circle" />
 						</button>
 						<ul className="dropdown-menu text-small dropdown-menu-end" aria-labelledby="dropdownUser1">
 						<li><Link className="dropdown-item" to="/settings">Settings</Link></li>
