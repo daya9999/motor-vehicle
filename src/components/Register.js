@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 
 const Register = () => {
 	return (
-		<div className="pt-5 pb-5 container-fluid">
+		<div className="pt-5 container-fluid">
 			<div className="row">
 				<div className="col-lg-3 col-sm-1" />
 				<div className="col">

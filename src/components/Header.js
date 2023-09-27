@@ -18,23 +18,29 @@ const Header = () => {
 					aria-expanded="false"
 					aria-label="Toggle navigation"
 				>
-					<span className="navbar-toggler-icon"></span>
+					<img alt="gear-icon" src={require("../images/gear.svg").default} />
 				</button>
 				<div className="collapse navbar-collapse" id="navbarSupportedContent">
 					<ul className="navbar-nav me-auto mb-2 mb-lg-0">
 						<li className="nav-item">
 							<Link to="/home" className={`nav-link${location.pathname === "/" || location.pathname === "/home" ? " active" : ""}`} aria-current="page">
-								Home
+								<span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">
+									Home
+								</span>
 							</Link>
 						</li>
 						<li className="nav-item">
 							<Link to="/about" className={`nav-link${location.pathname === "/about" ? " active" : ""}`} aria-current="page">
-								About
+								<span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">
+									About
+								</span>
 							</Link>
 						</li>
 						<li className="nav-item">
 							<Link to="/faq" className={`nav-link${location.pathname === "/faq" ? " active" : ""}`} aria-current="page">
-								FAQs
+								<span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">
+									FAQs
+								</span>
 							</Link>
 						</li>
 					</ul>
@@ -48,21 +54,23 @@ const Header = () => {
 							</button>
 							<ul className='dropdown-menu text-small dropdown-menu-end' aria-labelledby="dropdownUser1">
 								<li>
-									<Link className="dropdown-item" to="/settings">Settings</Link>
+									<Link className="dropdown-item" to="/settings"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">Settings</span></Link>
 								</li>
 								<li>
-									<Link className="dropdown-item" to="/profile">Profile</Link>
+									<Link className="dropdown-item" to="/profile"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">Profile</span></Link>
 								</li>
 								<li>
 									<hr className="dropdown-divider" />
 								</li>
 								<li>
-									<Link className="dropdown-item" to="/logout">Logout</Link>
+									<Link className="dropdown-item" to="/logout"><span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">Logout</span></Link>
 								</li>
 							</ul>
 						</li>}
 						{!user && <li className="nav-item">
-							<Link className={`nav-link rounded shadow-none${(location.pathname === "/login" || location.pathname === "/signup") ? ' active' : ''}`} to='/login'>Login / Signup</Link>
+							<Link className={`nav-link rounded shadow-none${(location.pathname === "/login" || location.pathname === "/signup") ? ' active' : ''}`} to='/login'>
+								<span data-bs-target="#navbarSupportedContent" data-bs-toggle="collapse">Login / Signup</span>
+							</Link>
 						</li>}
 					</ul>
 				</div>
