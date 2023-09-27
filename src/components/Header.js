@@ -3,6 +3,7 @@ import { Link, useLocation } from "react-router-dom";
 
 const Header = () => {
 	const location = useLocation();
+	const user = undefined;
 	return (
 		<nav className="navbar navbar-expand-lg navbar-dark bg-dark">
 			<div className="container-fluid">
@@ -41,17 +42,28 @@ const Header = () => {
 						<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
 					</div>
 					<ul class="navbar-nav">
-						<li className="nav-item dropdown">
+						{user && <li className="nav-item dropdown">
 							<button className="btn nav-link dropdown-toggle shadow-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
 								<img src={require("../images/invalid_user.png")} alt="mdo" width="32" height="32" className="rounded-circle" />
 							</button>
 							<ul className='dropdown-menu text-small dropdown-menu-end' aria-labelledby="dropdownUser1">
-							<li><Link className="dropdown-item" to="/settings">Settings</Link></li>
-							<li><Link className="dropdown-item" to="/profile">Profile</Link></li>
-							<li><hr className="dropdown-divider" /></li>
-							<li><Link className="dropdown-item" to="/logout">Logout</Link></li>
+								<li>
+									<Link className="dropdown-item" to="/settings">Settings</Link>
+								</li>
+								<li>
+									<Link className="dropdown-item" to="/profile">Profile</Link>
+								</li>
+								<li>
+									<hr className="dropdown-divider" />
+								</li>
+								<li>
+									<Link className="dropdown-item" to="/logout">Logout</Link>
+								</li>
 							</ul>
-						</li>
+						</li>}
+						{!user && <li className="nav-item">
+							<Link className={`nav-link rounded shadow-none${(location.pathname === "/login" || location.pathname === "/signup") ? ' active' : ''}`} to='/login'>Login / Signup</Link>
+						</li>}
 					</ul>
 				</div>
 			</div>

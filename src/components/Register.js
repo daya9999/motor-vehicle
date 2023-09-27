@@ -1,13 +1,13 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-const Login = () => {
+const Register = () => {
 	return (
 		<div className="pt-5 pb-5 container-fluid">
 			<div className="row">
 				<div className="col-lg-3 col-sm-1" />
 				<div className="col">
-				<h4 className="text-center pt-5 pb-5">Login!!!</h4>
+                    <h4 className="text-center pt-5 pb-5">Register!!!</h4>
 					<form>
 						<div className="mb-3">
 							<label
@@ -57,8 +57,8 @@ const Login = () => {
 						</button>
 					</form>
 					<h6 className="text-center">
-						<Link to="/signup" className="text-decoration-none">Need an account?</Link>
-					</h6>
+                        <Link to="/login" className="text-decoration-none">Already have an account?</Link>
+                    </h6>
 				</div>
 				<div className="col-lg-3 col-sm-1" />
 			</div>
@@ -66,4 +66,4 @@ const Login = () => {
 	);
 };
 
-export default Login;
+export default Register;
