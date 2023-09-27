@@ -40,17 +40,19 @@ const Header = () => {
 					<div className="d-flex">
 						<input className="form-control me-2" type="search" placeholder="Search" aria-label="Search" />
 					</div>
-					<div className="nav-item dropdown">
-						<button className="btn nav-link dropdown-toggle shadow-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
-						<img src={require("../images/invalid_user.png")} alt="mdo" width="32" height="32" className="rounded-circle" />
-						</button>
-						<ul className="dropdown-menu text-small dropdown-menu-end" aria-labelledby="dropdownUser1">
-						<li><Link className="dropdown-item" to="/settings">Settings</Link></li>
-						<li><Link className="dropdown-item" to="/profile">Profile</Link></li>
-						<li><hr className="dropdown-divider" /></li>
-						<li><Link className="dropdown-item" to="/logout">Logout</Link></li>
-						</ul>
-					</div>
+					<ul class="navbar-nav">
+						<li className="nav-item dropdown">
+							<button className="btn nav-link dropdown-toggle shadow-none" id="dropdownUser1" data-bs-toggle="dropdown" aria-expanded="false">
+								<img src={require("../images/invalid_user.png")} alt="mdo" width="32" height="32" className="rounded-circle" />
+							</button>
+							<ul className='dropdown-menu text-small dropdown-menu-end' aria-labelledby="dropdownUser1">
+							<li><Link className="dropdown-item" to="/settings">Settings</Link></li>
+							<li><Link className="dropdown-item" to="/profile">Profile</Link></li>
+							<li><hr className="dropdown-divider" /></li>
+							<li><Link className="dropdown-item" to="/logout">Logout</Link></li>
+							</ul>
+						</li>
+					</ul>
 				</div>
 			</div>
 		</nav>
